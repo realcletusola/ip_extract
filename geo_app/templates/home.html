@@ -1,0 +1,37 @@
+{% block content %} 
+{% load static %} 
+<html>
+    <head>
+        <title>Ip extract</title>
+        <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h2><i>IP Extract</i></h2>
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <input class="ip" type="text" name="ip_address" maxlength="18" required id="id_ip_address" placeholder="Enter IP Address">
+                <br/><input class="submit" type="submit" value="search">
+            </form>
+            <div class="result">
+                <p><b>IP</b>: {{data.query}}</p>
+                <p><b>Country</b>: {{data.country}}</p>
+                <p><b>Country Code</b>: {{data.country_code}}</p>
+                <p><b>Region</b>: {{data.region}}</p>
+                <p><b>Region Name</b>: {{data.region_name}}</p>
+                <p><b>City</b>: {{data.city}}</p>
+                <p><b>Zip</b>: {{data.zip_code}}</p>
+                <p><b>Latitude</b>: {{data.lat}}</p>
+                <p><b>Longitude</b>: {{data.lon}}</p>
+                <p><b>Timezone</b>: {{data.timezone}}</p>
+                <p><b>ISP</b>: {{data.isp}}</p>
+                <p><b>ISP Organization</b>: {{data.isp_org}}</p>
+                <p><b>ISP Association</b>: {{data.isp_ass}}</p>
+
+            </div>
+            
+        </div>
+    </body>
+
+</html>
+{% endblock %}
