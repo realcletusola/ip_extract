@@ -3,7 +3,7 @@
 <p>It uses the api provided by ip-api.com to get all details about any ip address </p> 
 
 <h4>Deployment:</h4>
-<p></p>
+<p>https://ipextract.pythonanywhere.com/</p>
 
 
 
